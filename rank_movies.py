@@ -11,7 +11,7 @@ def gaussian_decay(t, delta=365):
     return math.exp(-0.5 * ((t / delta) ** 2))
 
 # Function to generate personalized feed of movies for a given user
-def generate_movie_feed(user,users, movies,user_preferences,related_users):
+def generate_movie_feed(user, movies,user_preferences,related_users):
     # Get user preferences
     preferences = [{preference['genre']:preference['preference_score']} for user in user_preferences if user['user_id'] == user_id for preference in user['preference']]
 
@@ -81,4 +81,4 @@ if __name__ == "__main__":
     if user_id not in all_ids:
         raise Exception("No ID FOUND")
 
-    print(generate_movie_feed(user=user_id,users=users,movies=data_dict["movie_data.json"],user_preferences=data_dict["user_preference.json"],related_users=data_dict["related_users.json"]))
+    print(generate_movie_feed(user=user_id,movies=data_dict["movie_data.json"],user_preferences=data_dict["user_preference.json"],related_users=data_dict["related_users.json"]))
