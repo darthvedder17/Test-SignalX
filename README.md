@@ -30,3 +30,8 @@ Movie is an object with key fields being 'movie_id', 'genres' and 'release_date'
 User Preference Dataset which provides
 list of preferences for a given user with various genres the user has interacted with in the past.
 preference is object with key fields being 'user_id', 'genre' and 'preference_score'
+
+
+
+
+![Alt text](signal-z.png?raw=true "Output")
